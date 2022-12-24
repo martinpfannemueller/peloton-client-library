@@ -180,7 +180,7 @@ class PelotonObject:
 
         # We've gone through our pre-flight prep, now lets actually
         # serialize our data
-        for k, v in obj_attrs.items():
+        for k, v in obj_attrs.copy().items():
 
             # Ignore this key if it's in our dont_load list or is private
             if k.startswith('_') or k in dont_load:
